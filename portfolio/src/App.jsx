@@ -12,44 +12,138 @@ export default function PortfolioUI() {
     }
   ];
 
-  const stillImages = [
+  const edenImages = [
 
     {
       image: '/image/ECHOES OF EDEN/1.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/2.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/3.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/4.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/5.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/6.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/7.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/8.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     },
     {
       image: '/image/ECHOES OF EDEN/9.jpg',
-      title: 'ECHOES OF EDEN'
+      title: 'SHOWCASE_01'
     }
+
+  ];
+
+  const terasolImages = [
+
+    {
+      image: "/image/ELDECO TERRA SOL/1.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/2.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/3.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/4.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/5.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/6.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/7.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/8.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/9.jpg",
+      title: 'SHOWCASE_02'
+    }
+        {
+      image: "/image/ELDECO TERRA SOL/10.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/11.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/12.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/13.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/14.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/15.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/16.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/17.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/18.jpg",
+      title: 'SHOWCASE_02'
+    }
+        {
+      image: "/image/ELDECO TERRA SOL/19.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/20.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/21.jpg",
+      title: 'SHOWCASE_02'
+    },
+    {
+      image: "/image/ELDECO TERRA SOL/22.jpg",
+      title: 'SHOWCASE_02'
+    },
+    
 
   ];
 
