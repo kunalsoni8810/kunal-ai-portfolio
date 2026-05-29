@@ -1,158 +1,94 @@
 import { useEffect, useState } from "react";
 
 export default function PortfolioUI() {
+
   const animationVideos = [
     {
       title: 'AI Animation 01',
-      thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop'
+      thumbnail:
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop'
     },
     {
       title: 'AI Animation 02',
-      thumbnail: 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop'
+      thumbnail:
+        'https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop'
     }
   ];
+
+  // =========================
+  // EDEN IMAGES
+  // =========================
 
   const edenImages = [
-
-    {
-      image: '/image/ECHOES OF EDEN/1.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/2.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/3.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/4.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/5.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/6.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/7.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/8.jpg',
-      title: 'SHOWCASE_01'
-    },
-    {
-      image: '/image/ECHOES OF EDEN/9.jpg',
-      title: 'SHOWCASE_01'
-    }
-
+    { image: '/image/ECHOES OF EDEN/1.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/2.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/3.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/4.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/5.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/6.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/7.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/8.jpg', title: 'SHOWCASE_01' },
+    { image: '/image/ECHOES OF EDEN/9.jpg', title: 'SHOWCASE_01' }
   ];
+
+  // =========================
+  // TERRA SOL IMAGES
+  // =========================
 
   const terasolImages = [
-
-    {
-      image: "/image/ELDECO TERRA SOL/1.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/2.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/3.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/4.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/5.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/6.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/7.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/8.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/9.jpg",
-      title: 'SHOWCASE_02'
-    }
-        {
-      image: "/image/ELDECO TERRA SOL/10.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/11.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/12.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/13.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/14.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/15.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/16.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/17.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/18.jpg",
-      title: 'SHOWCASE_02'
-    }
-        {
-      image: "/image/ELDECO TERRA SOL/19.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/20.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/21.jpg",
-      title: 'SHOWCASE_02'
-    },
-    {
-      image: "/image/ELDECO TERRA SOL/22.jpg",
-      title: 'SHOWCASE_02'
-    },
-    
-
+    { image: "/image/ELDECO TERRA SOL/1.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/2.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/3.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/4.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/5.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/6.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/7.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/8.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/9.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/10.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/11.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/12.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/13.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/14.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/15.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/16.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/17.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/18.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/19.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/20.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/21.jpg", title: 'SHOWCASE_02' },
+    { image: "/image/ELDECO TERRA SOL/22.jpg", title: 'SHOWCASE_02' }
   ];
 
-  const [currentImage, setCurrentImage] = useState(0);
+  // =========================
+  // SLIDESHOW STATES
+  // =========================
+
+  const [currentEdenImage, setCurrentEdenImage] = useState(0);
+  const [currentTerasolImage, setCurrentTerasolImage] = useState(0);
+
+  // =========================
+  // EDEN SLIDESHOW
+  // =========================
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) =>
-        prev === stillImages.length - 1 ? 0 : prev + 1
+      setCurrentEdenImage((prev) =>
+        prev === edenImages.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // =========================
+  // TERRA SOL SLIDESHOW
+  // =========================
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTerasolImage((prev) =>
+        prev === terasolImages.length - 1 ? 0 : prev + 1
       );
     }, 3000);
 
@@ -162,209 +98,102 @@ export default function PortfolioUI() {
   return (
     <div className="min-h-screen bg-black text-white">
 
-      {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-
-          <h1 className="text-2xl md:text-3xl font-black tracking-[0.3em]">
+      {/* HERO */}
+      <section className="h-screen flex items-center justify-center text-center">
+        <div>
+          <h1 className="text-7xl font-black">
             KUNAL AI STUDIO
           </h1>
 
-          <nav className="flex items-center gap-8 text-sm uppercase tracking-[0.2em] text-zinc-300">
-            <a href="#animation">Animation</a>
-            <a href="#stills">Still Images</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section className="h-screen flex items-center justify-center text-center px-6 relative overflow-hidden">
-
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-black"></div>
-
-        <div className="relative z-10 max-w-5xl">
-
-          <p className="uppercase tracking-[0.4em] text-zinc-500 mb-5 text-sm">
-            Creative Portfolio
+          <p className="mt-6 text-zinc-400 text-xl">
+            3D Compositor • AI Creator • AI Editor
           </p>
-
-          <h2 className="text-6xl md:text-8xl font-black leading-none mb-8">
-            Kunal
-            <span className="block text-zinc-500">Soni</span>
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 text-sm md:text-lg uppercase tracking-[0.3em] text-zinc-300 font-semibold">
-            <span>3D Compositor</span>
-            <span>|</span>
-            <span>AI Creator</span>
-            <span>|</span>
-            <span>AI Editor</span>
-          </div>
-
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            Showcase your AI videos, cinematic animations, and still artworks in a clean modern portfolio.
-          </p>
-
         </div>
       </section>
 
-      {/* Animation */}
-      <section id="animation" className="max-w-7xl mx-auto px-6 py-28">
+      {/* ========================= */}
+      {/* EDEN SECTION */}
+      {/* ========================= */}
 
-        <div className="mb-14">
-          <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-3">
-            Section 01
-          </p>
+      <section className="max-w-7xl mx-auto px-6 py-24">
 
-          <h3 className="text-5xl font-black">
-            AI + Animation
-          </h3>
-        </div>
+        <h2 className="text-5xl font-black mb-14">
+          ECHOES OF EDEN
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="relative w-full h-[650px] overflow-hidden rounded-[2rem]">
 
-          {animationVideos.map((video, index) => (
-            <div
+          {edenImages.map((img, index) => (
+            <img
               key={index}
-              className="group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-white/10"
-            >
-
-              <img
-                src={video.thumbnail}
-                alt={video.title}
-                className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700"
-              />
-
-              <div className="absolute inset-0 bg-black/40 flex items-end p-8">
-                <div>
-                  <p className="text-zinc-400 text-sm uppercase tracking-wider mb-2">
-                    Video Project
-                  </p>
-
-                  <h4 className="text-3xl font-bold">
-                    {video.title}
-                  </h4>
-                </div>
-              </div>
-
-            </div>
+              src={img.image}
+              alt={img.title}
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
+                index === currentEdenImage
+                  ? "opacity-100"
+                  : "opacity-0"
+              }`}
+            />
           ))}
 
         </div>
-      </section>
 
-      {/* Still Images */}
-      <section id="stills" className="max-w-7xl mx-auto px-6 py-28">
+        {/* THUMBNAILS */}
 
-        <div className="mb-14">
-          <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-3">
-            Section 02
-          </p>
+        <div className="mt-8 flex flex-wrap gap-4">
 
-          <h3 className="text-5xl font-black">
-            Still Images
-          </h3>
-        </div>
-
-        <div className="max-w-5xl mx-auto">
-
-          <div className="group relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10">
-
-            <div className="relative w-full h-[650px] overflow-hidden">
-              {stillImages.map((img, index) => (
-                <img
-                  key={index}
-                  src={img.image}
-                  alt={img.title}
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${index === currentImage ? "opacity-100" : "opacity-0"
-                    }`}
-                />
-              ))}
-            </div>
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-10">
-
-              <div>
-
-                <p className="uppercase tracking-[0.3em] text-zinc-400 text-sm mb-4">
-                  Architectural Visualization Project
-                </p>
-
-                <h3 className="text-5xl md:text-7xl font-black mb-4">
-                  ECHOES OF EDEN
-                </h3>
-
-                <p className="text-zinc-300 text-lg max-w-2xl leading-relaxed">
-                  Luxury architectural visualization showcasing cinematic environments.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-4">
-
-                  {stillImages.map((img, index) => (
-                    <img
-                      key={index}
-                      src={img.image}
-                      alt={img.title}
-                      className="w-20 h-20 object-cover rounded-2xl border border-white/10"
-                    />
-                  ))}
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
+          {edenImages.map((img, index) => (
+            <img
+              key={index}
+              src={img.image}
+              alt={img.title}
+              className="w-20 h-20 object-cover rounded-2xl border border-white/10"
+            />
+          ))}
 
         </div>
 
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="max-w-4xl mx-auto px-6 py-28 text-center">
+      {/* ========================= */}
+      {/* TERRA SOL SECTION */}
+      {/* ========================= */}
 
-        <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-3">
-          Section 03
-        </p>
+      <section className="max-w-7xl mx-auto px-6 py-24">
 
-        <h3 className="text-5xl md:text-6xl font-black mb-8">
-          Contact
-        </h3>
+        <h2 className="text-5xl font-black mb-14">
+          ELDECO TERRA SOL
+        </h2>
 
-        <div className="space-y-6 text-lg md:text-xl">
+        <div className="relative w-full h-[650px] overflow-hidden rounded-[2rem]">
 
-          <a
-            href="mailto:kunalsoni9818@gmail.com"
-            className="block"
-          >
-            Email — kunalsoni9818@gmail.com
-          </a>
+          {terasolImages.map((img, index) => (
+            <img
+              key={index}
+              src={img.image}
+              alt={img.title}
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
+                index === currentTerasolImage
+                  ? "opacity-100"
+                  : "opacity-0"
+              }`}
+            />
+          ))}
 
-          <a
-            href="https://www.instagram.com/kunal_soni_portfolio?igsh=MXhyZDdnNnhzN2cwaQ=="
-            target="_blank"
-            className="block"
-          >
-            Instagram — @kunal_soni_portfolio
-          </a>
+        </div>
 
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            className="block"
-          >
-            YouTube — KUNAL SONI PORTFOLIO
-          </a>
+        {/* THUMBNAILS */}
 
-          <a
-            href="tel:8810580029"
-            className="block"
-          >
-            Contact — 8810580029
-          </a>
+        <div className="mt-8 flex flex-wrap gap-4">
+
+          {terasolImages.map((img, index) => (
+            <img
+              key={index}
+              src={img.image}
+              alt={img.title}
+              className="w-20 h-20 object-cover rounded-2xl border border-white/10"
+            />
+          ))}
 
         </div>
 
