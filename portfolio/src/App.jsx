@@ -14,64 +14,64 @@ export default function PortfolioUI() {
 
   const stillImages = [
 
-  {
-    image: '/image/ECHOES OF EDEN/1.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/2.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/3.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/4.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/5.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/6.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/7.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/8.jpg',
-    title: 'ECHOES OF EDEN'
-  },
-  {
-    image: '/image/ECHOES OF EDEN/9.jpg',
-    title: 'ECHOES OF EDEN'
-  }
+    {
+      image: '/image/ECHOES OF EDEN/1.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/2.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/3.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/4.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/5.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/6.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/7.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/8.jpg',
+      title: 'ECHOES OF EDEN'
+    },
+    {
+      image: '/image/ECHOES OF EDEN/9.jpg',
+      title: 'ECHOES OF EDEN'
+    }
 
-];
+  ];
 
-const [currentImage, setCurrentImage] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentImage((prev) =>
-      prev === stillImages.length - 1 ? 0 : prev + 1
-    );
-  }, 2000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) =>
+        prev === stillImages.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white">
-      
+
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          
+
           <h1 className="text-2xl md:text-3xl font-black tracking-[0.3em]">
             KUNAL AI STUDIO
           </h1>
@@ -87,7 +87,7 @@ useEffect(() => {
 
       {/* Hero */}
       <section className="h-screen flex items-center justify-center text-center px-6 relative overflow-hidden">
-        
+
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-black"></div>
 
         <div className="relative z-10 max-w-5xl">
@@ -178,11 +178,17 @@ useEffect(() => {
 
           <div className="group relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10">
 
-            <img
-              src={stillImages[currentImage].image}
-              alt="ECHOES OF EDEN"
-              className="w-full h-[650px] object-cover"
-            />
+            <div className="relative w-full h-[650px] overflow-hidden">
+              {stillImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.image}
+                  alt={img.title}
+                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${index === currentImage ? "opacity-100" : "opacity-0"
+                    }`}
+                />
+              ))}
+            </div>
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-10">
 
